@@ -1,5 +1,5 @@
 {
-	"name": "scaffold.js",
+	"name": "@almostjohn/scaffold.js",
 	"version": "1.0.0",
 	"description": "A framework to scaffold discord bot",
 	"scripts": {
