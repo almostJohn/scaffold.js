@@ -1,0 +1,50 @@
+{
+	"name": "scaffold.js",
+	"version": "1.0.0",
+	"description": "A framework to scaffold discord bot",
+	"scripts": {
+		"build:clean": "del-cli dist",
+		"build:check": "tsc",
+		"build": "npm run build:clean && npm run build:check",
+		"prepack": "npm run build"
+	},
+	"keywords": [],
+	"author": "almostJohn <garcia.johngale@gmail.com>",
+	"license": "MIT",
+	"type": "module",
+	"typings": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"import": "./dist/index.js",
+			"types": "./dist/index.d.ts"
+		},
+		"./types": {
+			"types": "./dist/types/index.d.ts"
+		}
+	},
+	"directories": {
+		"lib": "src"
+	},
+	"files": [
+		"dist"
+	],
+	"dependencies": {
+		"@discordjs/rest": "^2.4.3",
+		"discord-api-types": "^0.37.119",
+		"discord.js": "^14.18.0",
+		"tsyringe": "^4.9.1",
+		"type-fest": "^4.39.1"
+	},
+	"devDependencies": {
+		"@types/node": "^22.14.0",
+		"del-cli": "^6.0.0",
+		"typescript": "^5.8.3"
+	},
+	"engines": {
+		"node": ">=16.0.0"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"main": "index.js"
+}
